@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'src/app.dart';
 import 'src/controller/covid_statistics_controller.dart';
@@ -18,6 +19,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primaryColor: Colors.white,
+        textTheme: GoogleFonts.nanumGothicTextTheme(
+            Theme.of(context).textTheme
+        ),
       ),
       initialBinding: BindingsBuilder(() {
         Get.put(CovidStatisticsController());
